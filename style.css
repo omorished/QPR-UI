@@ -1,52 +1,52 @@
 
 
  body {
-  font-family: Arial, Helvetica, sans-serif;
   z-index: 0;
+  font-family: sans-serif;
   position: relative;
   height: 600px;
   margin: 0px;
   padding: 0px; 
 } 
-
+/* Bachground Image Webpage */
 #div-body {
-  position: absolute;
   z-index: 1;
-  left: 0px;
+  position: absolute;
   top: 0px;
   right: 0px;
   bottom: 0px;
+  left: 0px;
   width: 100%;
   height: 600px;
   background: url('./images/towers.jpg');
   background-attachment: fixed;
   background-size: cover;
 } 
-
+/* Background Opacity (light gray) */
 #div-opacity {
   z-index: 2;
   position: absolute;
-  left: 0px;
   top: 0px;
   right: 0px;
   bottom: 0px;
+  left: 0px;
   width: 100%;
   height: 600px;
   background-color: black; 
   opacity: 0.2;
 
 }
-
+/* Container Wrap all Buttons */
 #container {
-  z-index: 100;
+  /* 100 */
+  z-index: 3; 
   position: absolute;
-  width: 100%;
-  height: 230px;
   bottom: 0px;
-  
+  width: 100%;
+  height: 200px; 
 }
 
-.btn {
+.category-btn {
   margin-left: 3.2px;
   box-sizing: border-box;
   position: relative;
@@ -61,21 +61,34 @@
 
 }
 
+.category-btn:hover {
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.65);
+
+}
+
 span {
   display: block;
   font-size: 16px;
   color: rgba(255, 255, 255, 0.7)
 }
 
-.img {
-  z-index: 200;
+.category-name {
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+
+.category-img {
+  /* 200 */
+  z-index: 4; 
   background-position: center;
   margin-left: 45px;
   margin-top: 0px;
   
 
 }
-
+/* VISION */
 #img-1 {
   width: 70px;
   height: 70px;
@@ -83,7 +96,7 @@ span {
   margin-bottom: 10px;
   background-image: url('./images/eye.png');  
 }
-
+/* STRATEGY */
 #img-2 {
   width: 60px;
   height: 60px;
@@ -91,7 +104,7 @@ span {
   margin-bottom: 27px;
   background-image: url('./images/chess.png');  
 }
-
+/* ORGNAIZATION */
 #img-3 {
   width: 60px;
   height: 60px;
@@ -100,7 +113,7 @@ span {
   background-image: url('./images/hierarchy.png');  
 
 }
-
+/* EXECUTIVE DASHBOARDS */
 #img-4 {
   margin-top: 20px;
   width: 65px;
@@ -111,7 +124,7 @@ span {
 
 
 }
-
+/* RISKS */
 #img-5 {
   margin-top: 5px;
   width: 70px;
@@ -120,7 +133,7 @@ span {
   margin-bottom: 22px;
   background-image: url('./images/pillars.png');  
 }
-
+/* INTIATIVES */
 #img-6 {
   margin-top: 5px;
   width: 65px;
@@ -129,8 +142,7 @@ span {
   margin-bottom: 22px;
   background-image: url('./images/rocket.png');  
 }
-
-
+/* REPORTING */
 #img-7 {
   margin-top: 5px;
   width: 65px;
@@ -141,23 +153,98 @@ span {
 }
 
 
-.cat {
+#side-menu {
+z-index: 100;
+position: fixed;
+top: 100px;
+width: 150px;
+height: 500px;
+left: -300px;
+transition: all 200ms linear;
+}
 
-  margin-top: 20px;
-  margin-bottom: 30px;
+/* show side menu */
+#side-menu.active {
+  left: 0px; 
+}
+
+#side-menu ul {
+  /* 600 */
+  z-index: 100;
+  padding: 0px;
+  margin: 0px;
+  width: 300px;
+
 
 }
 
+#side-menu ul li {
+  list-style: none;
+  text-align: center;
+  background-color: white;
+}
 
-#span-2 {
-  background-image: url('./images/chess.png');  
+#side-menu ul li a {
+  display: block;
+  text-decoration: none;
+  padding: 26.5px 40px;
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 16px;
+  border-radius: 3px;
+}
 
+#side-menu ul li a:hover {
+  background-color: rgb(220, 220, 220);
+
+}
+/* Hamburger menu button */
+#side-menu-btn {
+  z-index: 100;
+  position: fixed;
+  top: 25px;
+  left: 5px;
+  width: 45px;
+  height: 40px;
+  background-image: url('./images/menu-btn.png');
+  background-size: 33px;
+  background-position: center;
+  background-repeat: no-repeat;
+  
+}
+/* When Side Menu Button clicked (Active) */
+#side-menu-btn.active {
+  background-image: url('./images/menu-btn-filled.png');
+}
+
+#qpr-logo {
+  z-index: 100;
+  position: fixed;
+  top: 0px;
+  right: 10px;
+  width: 120px;
+  height: 120px;
+  margin: 0px;
+  padding: 0px;
+  background-image: url('./images/qpr-logo.png');
+  background-size: 150px;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 
-.btn:hover {
-
-  background-color: rgba(0, 0, 0, 0.65);
-
+#center-text {
+  z-index: 4;
+  position: absolute;
+  top: 100px;
+  width: 100%;
+  margin: auto;
 }
+
+#center-text h1{
+  color: rgba(255, 255, 255, 0.95);
+  text-align: center;
+  text-shadow: 2px 2px rgba(0, 0, 0, 0.9);
+  font-size: 36px;
+}
+
 

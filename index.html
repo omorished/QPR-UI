@@ -7,28 +7,52 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  
+  <!-- /* Bachground Image Webpage */ -->
   <div id="div-body"> </div>
+
+  <!-- Background Opacity -->
   <div id="div-opacity"> </div>
 
-  <div id="container">
-    <button class="btn"><span class="img" id="img-1"></span>
-      <span class="cat">VISION</span></button>
-    <button class="btn"><span class="img" id="img-2"></span>
-      <span class="cat">STRATEGY*</span></button>
-    <button class="btn"><span class="img" id="img-3"></span>
-      <span class="cat">ORGNAIZATION*</span></button>
-    <button class="btn"><span class="img" id="img-4"></span>
-      <span class="cat">EXECUTIVE DASHBOARDS*</span></button>
-    <button class="btn"><span class="img" id="img-5"></span>
-      <span class="cat">RISKS*</span></button>
-    <button class="btn"><span class="img" id="img-6"></span>
-      <span class="cat">INTIATIVES*</span></button>
-    <button class="btn"><span class="img" id="img-7"></span>
-      <span class="cat">REPORTING*</span></button>
+  <!-- Container Wrap all Buttons  -->
+    <div id="container">
+      <button class="category-btn"><span class="category-img" id="img-1"></span>
+        <span class="category-name">VISION</span></button>
+      <button class="category-btn"><span class="category-img" id="img-2"></span>
+        <span class="category-name">STRATEGY*</span></button>
+      <button class="category-btn"><span class="category-img" id="img-3"></span>
+        <span class="category-name">ORGNAIZATION*</span></button>
+      <button class="category-btn"><span class="category-img" id="img-4"></span>
+        <span class="category-name">EXECUTIVE DASHBOARDS*</span></button>
+      <button class="category-btn"><span class="category-img" id="img-5"></span>
+        <span class="category-name">RISKS*</span></button>
+      <button class="category-btn"><span class="category-img" id="img-6"></span>
+        <span class="category-name">INTIATIVES*</span></button>
+      <button class="category-btn"><span class="category-img" id="img-7"></span>
+        <span class="category-name">REPORTING*</span></button>
+    </div>
+
+<!-- Left Side Menu -->
+  <div id="side-menu">
+    <ul>
+      <li><a href="#">HOME</a></li>
+      <li><a href="#">STRATEGY</a></li>
+      <li><a href="#">ORGNAIZATION</a></li>
+      <li><a href="#">EXECUTIVE DASHBOARDS</a></li>
+      <li><a href="#">RISKS</a></li>
+      <li><a href="#">INTIATIVES</a></li>
+      <li><a href="#">REPORTING</a></li>
+    </ul>
+  </div>
+<!-- Side Menu Button -->
+  <div id="side-menu-btn" onclick="menuBtnClicked()"> </div>
+<!-- QPR Logo -->
+  <div id="qpr-logo"></div>
+<!-- Text That Center The Webpage -->
+  <div id="center-text">
+    <h1>STRATEGY EXECUTION <br> & <br> PERFORMANCE MANAGMENT</h1>
   </div>
 
-
+  <script src="./main.js"></script>
 
 </body>
 </html>
